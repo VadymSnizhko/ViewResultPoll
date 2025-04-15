@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Перегляд sheet1.xml</title>
+    <title>Перегляд звіту опитування</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script defer src="./js/parsXML.js"></script>
+    <script defer src="./js/parsCSV.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h2>Завантаження архіву з ПРРО</h2>
-    <input type="file" id="fileInput" accept="*" />
-    <h3 id="totalSum">Загальна сума: 0 грн</h3>
-    <p id="tax">Податок 5 %:</p>
+    <h2>Завантаження csv файл звіту</h2>
+    <input type="file" id="fileInput" accept=".csv" />
+    <h3 id="totalSum">Загальна кількість присутніх:</h3>
     <table id="dataTable"></table>
+    <div id="output"></div>
+
+    <!--<input type="file" id="csvFileInput" accept=".csv" />
+    <div id="tableContainer"></div>
+    <p id="sum"></p>-->
   </body>
 </html>
