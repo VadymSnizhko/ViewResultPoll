@@ -2,7 +2,10 @@ document
   .getElementById('fileInput')
   .addEventListener('change', async function (event) {
     const file = event.target.files[0];
-    if (!file) return;
+    if (!file.name.toLowerCase().endsWith('.csv')) {
+      alert('Будь ласка, оберіть CSV файл');
+      return;
+    }
 
     const reader = new FileReader();
     reader.onload = function (e) {
